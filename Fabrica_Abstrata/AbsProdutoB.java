@@ -1,3 +1,3 @@
 public abstract class AbsProdutoB {
-    void abstract criar();
+    abstract void criar();
 }

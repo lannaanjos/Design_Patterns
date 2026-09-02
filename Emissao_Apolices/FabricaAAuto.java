@@ -1,3 +1,4 @@
-public class FabricaAAuto {
-    
+public class FabricaAAuto extends AbsFabrica{
+    @Override
+    public void fabricaApolice();
 }

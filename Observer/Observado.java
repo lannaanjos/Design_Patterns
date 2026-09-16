@@ -17,4 +17,18 @@ public class Observado extends AbsObservado {
         }
     }
 
+    @Override
+    public void inscrever(AbsObservador observador){
+        System.out.println("");
+    }
+
+    @Override
+    public void remover(AbsObservador observador){
+        System.out.println("");
+    }
+
+    public void update(){
+        System.out.println("");
+    }
+
 }

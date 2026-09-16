@@ -6,6 +6,8 @@ public abstract class AbsObservado {
 
     public abstract void inscrever(AbsObservador observador);
     public abstract void remover(AbsObservador observador);
+
+    
 }
 
 

@@ -33,7 +33,7 @@ public class ApoliceViagem extends AbsApolice {
 
     @Override
     String geraResumos() {
-        return numero + " | " + segurado + " | " + java.time.LocalDate.now()
-                + " | R$ " + String.format("%.2f", calculaPremio()) + " | " + listaDocumentos();
+        return numero + " - " + segurado + " - " + java.time.LocalDate.now()
+                + " - R$ " + String.format("%.2f", calculaPremio()) + " - " + listaDocumentos();
     }
 }

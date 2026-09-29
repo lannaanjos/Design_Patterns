@@ -8,8 +8,8 @@ public class ApoliceResidencial extends AbsApolice {
         this.numero = "RES-" + contador;
         this.segurado = segurado;
         this.valorImovel = valorImovel;
-        this.altoPadrao = e_altoPadrao;
-        this.possuiEscritura = temEscritura;
+        this.e_altoPadrao = e_altoPadrao;
+        this.temEscritura = temEscritura;
 
         contador++;
     }
@@ -17,13 +17,13 @@ public class ApoliceResidencial extends AbsApolice {
     @Override
     double calculaPremio() {
         double premioAnual = valorImovel * 0.015;
-        if (altoPadrao) premioAnual *= 1.25;
+        if (e_altoPadrao) premioAnual *= 1.25;
         return premioAnual / 12;
     }
  
     @Override
     boolean validaCobertura() {
-        return possuiEscritura;
+        return temEscritura;
     }
  
     @Override
@@ -37,4 +37,3 @@ public class ApoliceResidencial extends AbsApolice {
                 + " - R$ " + String.format("%.2f", calculaPremio()) + " - " + listaDocumentos();
     }
 }
-

@@ -6,7 +6,7 @@ public class ApoliceAuto extends AbsApolice{
     private int idadeMotorista, anosHabilitacao;
 
     public ApoliceAuto(String segurado, double valorFipe, int idadeMotorista, int anosHabilitacao, double coberturaTerceiros){
-        this.numero = "Auto-" + contador;
+        this.numero = "AUTO-" + contador;
         this.segurado = segurado;
         this.valorFipe = valorFipe;
         this.idadeMotorista = idadeMotorista;
@@ -17,9 +17,9 @@ public class ApoliceAuto extends AbsApolice{
     }
 
     @Override
-    double calcularPemio() {
+    double calculaPremio() {
         double premioAnual = valorFipe * 0.08;
-        if (idadeCondutor < 25) premioAnual *= 1.30;
+        if (idadeMotorista < 25) premioAnual *= 1.30;
         if (anosHabilitacao < 2) premioAnual *= 1.20;
         return premioAnual / 12;
     }
@@ -31,7 +31,12 @@ public class ApoliceAuto extends AbsApolice{
 
     @Override
     String listaDocumentos() {
-        return "CNHm CRLV, comprovante de residente"
+        return "CNH, CRLV, comprovante de residência";
     }
 
+    @Override
+    String geraResumos() {
+        return numero + " - " + segurado + " - " + java.time.LocalDate.now()
+                + " - R$ " + String.format("%.2f", calculaPremio()) + " - " + listaDocumentos();
+    }
 }

@@ -1,9 +1,9 @@
 public abstract class AbsApolice {
-    abstract void calcularPemio();
+    abstract double calcularPemio();
 
-    abstract void validaCobertura();
+    abstract boolean validaCobertura();
 
-    abstract void listaDocumentos();
+    abstract String listaDocumentos();
 
-    abstract  void geraResumo();
+    abstract String geraResumo();
 }

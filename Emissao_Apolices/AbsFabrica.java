@@ -1,5 +1,5 @@
 public abstract class AbsFabrica {
-    abstract void fabricaApolice();
+    abstract AbsApolice fabricaApolice();
 }
 
 // As sub fabricas precisam usar a abstração do produto

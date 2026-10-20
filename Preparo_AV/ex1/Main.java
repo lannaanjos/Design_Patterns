@@ -12,3 +12,5 @@ public class Main {
         fabricaVida.emitir();
     }
 }
+
+// Método usado: Abstract Factory
